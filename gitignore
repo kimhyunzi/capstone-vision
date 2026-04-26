@@ -1,0 +1,25 @@
+# 모델 파일
+*.pth
+*.pt
+*.onnx
+
+# 데이터
+*.npy
+numpy_out_v6/
+dataset/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# 기타
+*.log
+*.csv
