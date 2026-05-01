@@ -1,0 +1,36 @@
+person_follower:
+  ros__parameters:
+    camera_hfov: 120.0
+    image_width: 2304
+    image_height: 1296
+    yolo_model: "yolov8n.pt"
+    yolo_conf: 0.5
+    lidar_angle_margin: 5.0
+    lidar_range_min: 0.26
+    lidar_range_max: 16.0
+    smooth_window: 5
+    sensor_id: 0
+    framerate: 55
+
+ydlidar_node:
+  ros__parameters:
+    port: /dev/ydlidar
+    frame_id: laser_frame
+    baudrate: 230400
+    lidar_type: 1
+    device_type: 6
+    sample_rate: 9
+    abnormal_check_count: 4
+    fixed_resolution: false
+    reversion: true
+    inverted: false
+    auto_reconnect: true
+    isSingleChannel: false
+    intensity: false
+    support_motor_dtr: false
+    angle_min: -180.0
+    angle_max: 180.0
+    range_min: 0.26
+    range_max: 16.0
+    frequency: 7.0
+    invalid_range_is_inf: false
