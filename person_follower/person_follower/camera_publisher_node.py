@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
+import sys
+sys.path.insert(0, '/usr/lib/python3/dist-packages')
+import cv2
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
-import cv2
 
 class CameraPublisherNode(Node):
     def __init__(self):
         super().__init__('camera_publisher_node')
-        self.declare_parameter('width', 1920)
-        self.declare_parameter('height', 1080)
-        self.declare_parameter('framerate', 30)
+        self.declare_parameter('width', 2304)
+        self.declare_parameter('height', 1296)
+        self.declare_parameter('framerate', 55)
         self.declare_parameter('sensor_id', 0)
 
         w   = self.get_parameter('width').value

@@ -27,6 +27,9 @@ setup(
         'console_scripts': [
             'person_follower_node = person_follower.person_follower_node:main',
             'camera_publisher_node = person_follower.camera_publisher_node:main',
+	        'visualizer_node = person_follower.visualizer_node:main',
+
+
         ],
     },
 )

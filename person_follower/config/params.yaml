@@ -3,14 +3,24 @@ person_follower:
     camera_hfov: 120.0
     image_width: 2304
     image_height: 1296
-    yolo_model: "yolov8n.pt"
+    yolo_model: "/home/jetson/yolov8n.engine"
     yolo_conf: 0.5
-    lidar_angle_margin: 5.0
     lidar_range_min: 0.26
     lidar_range_max: 16.0
     smooth_window: 5
-    sensor_id: 0
+    camera_to_lidar_yaw_offset_deg: 0.0
+    max_scan_age_sec: 0.2
+    min_lidar_angle_margin: 2.0
+    max_lidar_angle_margin: 6.0
+    target_switch_penalty_deg: 12.0
+    lost_count_threshold: 10
+
+camera_publisher:
+  ros__parameters:
+    width: 2304
+    height: 1296
     framerate: 55
+    sensor_id: 0
 
 ydlidar_node:
   ros__parameters:
